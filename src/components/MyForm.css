@@ -1,0 +1,181 @@
+.my-form-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    box-sizing: border-box;
+    background: #f5f7fb;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.my-form-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid #e8eaf0;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(30, 35, 50, 0.1);
+    animation: my-form-enter 0.6s ease-out;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.my-form-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 70px rgba(30, 35, 50, 0.14);
+}
+
+.my-form-header {
+    margin-bottom: 30px;
+}
+
+.my-form-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #f0edff;
+    color: #6548d8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.my-form-title {
+    margin: 14px 0 8px;
+    color: #171923;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.my-form-description {
+    margin: 0;
+    color: #777d8c;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.my-form-field {
+    margin-bottom: 22px;
+}
+
+.my-form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #303440;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.my-form-input {
+    width: 100%;
+    height: 52px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border: 1px solid #dfe2e9;
+    border-radius: 12px;
+    outline: none;
+    background: #fafbfc;
+    color: #20232d;
+    font-size: 14px;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.my-form-input::placeholder {
+    color: #a2a7b3;
+}
+
+.my-form-input:focus {
+    border-color: #7357e8;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(115, 87, 232, 0.1);
+    transform: translateY(-1px);
+}
+
+.my-form-button {
+    position: relative;
+    width: 100%;
+    height: 53px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7357e8, #5639c9);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(92, 63, 210, 0.2);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.my-form-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.16);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+.my-form-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(92, 63, 210, 0.28);
+}
+
+.my-form-button:hover::before {
+    left: 140%;
+}
+
+.my-form-button:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 14px rgba(92, 63, 210, 0.2);
+}
+
+.my-form-footer {
+    margin: 18px 0 0;
+    color: #9a9eaa;
+    font-size: 11px;
+    text-align: center;
+}
+
+@keyframes my-form-enter {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .my-form-page {
+        padding: 20px 14px;
+    }
+
+    .my-form-card {
+        padding: 30px 22px;
+        border-radius: 20px;
+    }
+
+    .my-form-title {
+        font-size: 25px;
+    }
+}
